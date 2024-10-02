@@ -1,0 +1,12 @@
+:host {
+    display: flex;
+    gap: 1rem;
+}
+
+.question {
+    flex: 1;
+}
+
+button {
+    margin-top: 0.25rem;
+}

@@ -1,0 +1,17 @@
+<mat-form-field>
+    <mat-label>Workflow</mat-label>
+    <select matNativeControl #assistant>
+        @for (assistant of assistants(); track assistant.assistant_id) {
+            <option [value]="assistant.assistant_id">{{ assistant.name }}</option>
+        }
+    </select>
+</mat-form-field>
+
+<mat-form-field class="question">
+    <mat-label>Question</mat-label>
+    <input matNativeControl #question>
+</mat-form-field>
+
+<button mat-raised-button (click)="run.emit({ assistantId: assistant.value, question: question.value })">
+    Query
+</button>

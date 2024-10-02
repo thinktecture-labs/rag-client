@@ -1,0 +1,15 @@
+:host {
+    display: flex;
+    flex-direction: column;
+
+    margin-inline: 1rem;
+    height: calc(100% - 64px);
+}
+
+.content {
+    flex: 1;
+}
+
+.ready {
+    opacity: 0.5;
+}

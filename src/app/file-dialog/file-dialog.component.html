@@ -1,0 +1,11 @@
+<h2 mat-dialog-title>{{ document.metadata.title }}</h2>
+<mat-dialog-content class="mat-typography">
+    <p>{{ document.metadata.author }}</p>
+    <p>{{ document.metadata.feed }}</p>
+    <p>{{ document.metadata.link }}</p>
+    <p>{{ document.metadata.publish_date }}</p>
+    <section [innerHTML]="document.page_content"></section>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

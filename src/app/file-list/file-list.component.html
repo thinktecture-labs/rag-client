@@ -1,0 +1,9 @@
+<mat-action-list>
+    @for (document of documents(); track document.id) {
+        <button mat-list-item (click)="open(document)">
+            <mat-icon matListItemIcon>insert_drive_file</mat-icon>
+            <span matListItemTitle>{{ document.metadata.title }}</span>
+            <span matListItemLine>{{ document.metadata.author }}</span>
+        </button>
+    }
+</mat-action-list>

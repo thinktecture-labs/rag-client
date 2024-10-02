@@ -1,0 +1,111 @@
+<h2 class="mat-headline-small">Angular</h2>
+<mat-accordion>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>Vorbereitung auf Zoneless: Neue Komponenten ab September 2024 nur noch mit Signals und
+                OnPush!
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Bei ACME nutzen wir Signals und ChangeDetectionStrategy.OnPush, um den Umstieg auf zoneless Angular
+            vorzubereiten. Dies hilft uns, die Leistung unserer Anwendung zu optimieren, indem unnötige Überprüfungen in
+            der Change Detection vermieden werden. Signals ermöglicht eine reaktive Programmierung, die auf deklarative
+            Weise Zustandsänderungen überwacht, während ChangeDetectionStrategy.OnPush verhindert, dass die Angular-View
+            unerwartet aktualisiert wird, es sei denn, es gibt eine deutliche Datenänderung. Diese Kombination trägt
+            dazu bei, den Overhead der Zone.js zu reduzieren und den Übergang zu einem zonenlosen Architekturansatz zu
+            erleichtern, der eine effizientere und skalierbarere Anwendung ermöglicht.</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>Umstellung auf Standalone: Neue Komponenten ab Oktober 2023 nur noch standalone!
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Mit der Umstellung auf Standalone-Komponenten richten wir uns nach den neuesten Entwicklungen in Angular,
+            welche die Wartbarkeit und die Struktur von Anwendungen verbessern können. Diese Guidelines sollen
+            sicherstellen, dass unsere Codebasis konsistent und leicht erweiterbar bleibt.</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>Verwende "acme" als Präfix für Komponenten und Direktiven</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Komponenten und Direktiven müssen "acme" als Präfix für ihren Selektor verwenden. Nutzen Sie Tools wie
+            Angular CLI, um die Erzeugung neuer Komponenten und Direktiven zu standardisieren und Konventionen
+            durchzusetzen.</p>
+    </mat-expansion-panel>
+</mat-accordion>
+
+<h2 class="mat-headline-small">JavaScript/TypeScript</h2>
+<mat-accordion>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>Zeilenende unbedingt mit Semikolon abschließen</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>In JavaScript ist das Setzen von Semikola am Ende von Anweisungen zwar oft optional, jedoch eine bewährte
+            Praxis, um die Klarheit und Zuverlässigkeit des Codes zu gewährleisten. JavaScript verwendet einen
+            Mechanismus namens "Automatic Semicolon Insertion" (ASI), der versucht, fehlende Semikola zu ergänzen und so
+            den Code lauffähig zu machen. Allerdings kann ASI zu unvorhersehbaren Fehlern führen, insbesondere in
+            komplexen Codeblöcken oder bei Mehrzeiler-Anweisungen. Daher ist es ratsam, jede Anweisung mit einem
+            Semikolon zu beenden, um Missverständnisse beim Einlesen des Codes zu vermeiden und die Absicht des
+            Entwicklers klar zu kommunizieren. Diese Praxis unterstützt zudem eine einheitliche Codeformatierung, die
+            die Wartbarkeit und Lesbarkeit erhöht.</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>Verwende let und const, kein var</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>In JavaScript sind let, const und var Schlüsselwörter zur Deklaration von Variablen, die sich hauptsächlich
+            in ihrem Gültigkeitsbereich und ihrer Änderbarkeit unterscheiden. Das Schlüsselwort let ermöglicht die
+            Deklaration von variablen Werten, die innerhalb ihres gültigen Block-Scope neu zugewiesen werden können, was
+            es ideal für Schleifen und bedingte Logik macht. Im Gegensatz dazu wird const für Konstanten verwendet,
+            deren Wert nach der Initialisierung nicht mehr geändert werden kann; sie bieten ebenfalls Block-Scope und
+            eignen sich hervorragend für Werte, die während der gesamten Laufzeit stabil bleiben sollen. Das ältere var
+            deklariert Variablen mit einem funktionalen oder globalen Scope, je nach Kontext, und kann zu
+            unbeabsichtigten Nebenwirkungen führen, wenn Variablen außerhalb ihres beabsichtigten Bereichs zugänglich
+            oder überschrieben werden. Aus diesem Grund wird empfohlen, var zu vermeiden und stattdessen die moderneren
+            let und const zu verwenden, um die Übersichtlichkeit und Wartbarkeit des Codes zu verbessern.</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>Verwende destrukturierende Zugriffe</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Bei der Verwendung von Destrukturierung in JavaScript sollte darauf geachtet werden, den Code klarer und
+            leserlicher zu gestalten, indem man Objekte und Arrays effizienter handhabt. Es ist hilfreich, Standardwerte
+            zu setzen, um unerwartetes Verhalten bei undefined Werten zu vermeiden. Funktionen profitieren von
+            destrukturierten Parametern, wodurch der Code selbstdokumentierend wird. Dennoch sollte man übermäßige und
+            komplexe Destrukturierung vermeiden, um die Lesbarkeit nicht zu beeinträchtigen. Der Rest-Operator kann
+            genutzt werden, um die verbleibenden Elemente in Arrays oder Objekten zu erfassen. In Schleifen eignet sich
+            Destrukturierung, um direkt auf Objekte zuzugreifen, während man immer auf mögliche Namenskonflikte achten
+            sollte. Die Anpassung der Destrukturierung an die bestehenden Codestyle-Regeln der Codebasis ist
+            entscheidend für Konsistenz und Wartbarkeit.</p>
+    </mat-expansion-panel>
+</mat-accordion>
+
+<h2 class="mat-headline-small">Tooling</h2>
+<mat-accordion>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>Tabs vs. Spaces</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Bei ACME nutzen wir grundsätzlich Spaces (die einzig wahre Antwort auf diese Frage). Der Vorteil von Spaces
+            ist, dass sie präzise Kontrolle über die Einrückung bieten, da sie fest definierte Abstände zwischen Zeichen
+            ermöglichen. Dadurch wird der Code nicht nur besser strukturiert, sondern es wird auch einfacher,
+            Code-Reviews durchzuführen und Kollaborationen innerhalb des Teams zu verbessern.</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>Linte deinen Code</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Bei ACME nutzen wir ESLint für die statische Codeanalyse. ESLint ist ein statisches Code-Analyse-Tool für
+            JavaScript, das Entwicklern hilft, potenzielle Fehler zu identifizieren und einen konsistenten Code-Stil
+            sicherzustellen. Durch die Verwendung von konfigurierbaren Regeln kann ESLint automatisch Problembereiche im
+            Code hervorheben, wie z.B. Syntaxfehler, mögliche Logikfehler oder Stil-Inkonsistenzen. Entwickler können
+            ESLint an ihre spezifischen Bedürfnisse anpassen, eigene Regeln erstellen oder bestehende Regelsets
+            und Plugins verwenden, um die Codequalität zu verbessern und die Wartbarkeit des Codes zu erhöhen.</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>Maximale Zeilenlänge 100 Zeichen</mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>Stelle sicher, dass keine Zeile mehr als 100 Zeichen enthält, einschließlich Leerzeichen und Tabulatoren.
+            Verwende automatische Formatierungswerkzeuge oder Texteditor-Funktionen, um die Zeilenlänge einzuhalten.</p>
+    </mat-expansion-panel>
+</mat-accordion>

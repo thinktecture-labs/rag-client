@@ -1,0 +1,13 @@
+<div class="content">
+    @if (loading()) {
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    }
+
+    @if (response(); as run) {
+        <p class="mat-typography">{{ run.generation?.content }}</p>
+        <app-file-list [documents]="run.documents ?? []"/>
+    }
+</div>
+
+<app-chat-bar [assistants]="workflowService.assistants()"
+              (run)="run($event.assistantId, $event.question)"></app-chat-bar>
