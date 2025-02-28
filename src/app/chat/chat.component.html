@@ -5,6 +5,13 @@
 
     @if (response(); as run) {
         <p class="mat-typography">{{ run.generation?.content }}</p>
+        <mat-chip-set>
+            @switch (run.trust_level) {
+                @case (1) { <mat-chip>Gold</mat-chip> }
+                @case (2) { <mat-chip>Silver</mat-chip> }
+                @case (3) { <mat-chip>Bronze</mat-chip> }
+            }
+        </mat-chip-set>
         <app-file-list [documents]="run.documents ?? []"/>
     }
 </div>

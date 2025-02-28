@@ -1,25 +1,19 @@
 import { Component, inject, signal } from '@angular/core';
-import { MatButton } from '@angular/material/button';
-import { MatFormField, MatLabel } from '@angular/material/form-field';
-import { MatIcon } from '@angular/material/icon';
-import { MatInput } from '@angular/material/input';
 import { MatProgressBar } from '@angular/material/progress-bar';
 import { ChatBarComponent } from '../chat-bar/chat-bar.component';
 import { FileListComponent } from '../file-list/file-list.component';
 import { WorkflowService } from '../workflow.service';
+import { MatChip, MatChipSet } from "@angular/material/chips";
 
 @Component({
     selector: 'app-chat',
     standalone: true,
     imports: [
-        MatFormField,
-        MatLabel,
-        MatInput,
-        MatButton,
-        MatIcon,
         FileListComponent,
         MatProgressBar,
         ChatBarComponent,
+        MatChipSet,
+        MatChip,
     ],
     templateUrl: './chat.component.html',
     styleUrl: './chat.component.css',

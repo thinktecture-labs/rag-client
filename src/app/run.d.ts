@@ -2,6 +2,7 @@ interface Run {
     question: string;
     generation?: Generation;
     documents?: RunDocument[];
+    trust_level: number;
 }
 
 interface Generation {
