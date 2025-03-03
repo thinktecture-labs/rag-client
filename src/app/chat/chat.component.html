@@ -16,5 +16,5 @@
     }
 </div>
 
-<app-chat-bar [assistants]="workflowService.assistants()"
+<app-chat-bar [assistants]="[]"
               (run)="run($event.assistantId, $event.question)"></app-chat-bar>
