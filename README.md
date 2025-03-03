@@ -1,27 +1,3 @@
-# NgDaysLanggraph
+# AI-Praxis-Workshop: Intelligente Business-Apps mit Angular, LangGraph und RAG
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.2.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Generative AI kann Unternehmensinformationen aus Systemen wie Confluence, Jira oder Files in wertvolles Wissen umwandeln, das in natürlicher Sprache abfragbar ist. In diesem Workshop zeigen die GenAI Technical Consultants Christian Liebel und Marco Frodl, wie eine Generative-AI-Anwendung für Unternehmensherausforderungen entwickelt wird, mit Fokus auf Datenrecherche in natürlicher Sprache und mit einem AI-Backend und einem Angular-Frontend. Der Workshop bietet eine Einführung in die Grundlagen von Generative AI, einschließlich der Unterschiede zu AI und ML sowie Konzepte wie LLMs, Embeddings, Retrieval-augmented Generation (RAG) und Python-basierten AI-Frameworks. Im Mittelpunkt steht die praktische Umsetzung: Gemeinsam entwickeln wir ein intelligentes Developer-Portal, das Fragen von Entwicklern in natürlicher Sprache beantwortet und deren Produktivität mit KI-basierten, kontextbezogenen Empfehlungen verbessert. Statt statischer Coding Guidelines kommen dynamische, AI-generierte Empfehlungen zum Einsatz, die individuell auf die Bedürfnisse der Entwickler zugeschnitten sind. Als Wissensbasis dient ein Coding-Guidelines-Wiki, dessen Inhalte automatisch in eine Vektordatenbank übertragen werden, um sie für die KI verfügbar zu machen. Datenschutz hat dabei höchste Priorität – wir setzen ausschließlich europäische Modelle ein und vermeiden Datentransfers außerhalb Europas. Mit LangChain und LangGraph, zwei Python-basierten Frameworks, erstellen wir einen AI-Workflow, der Fragen intelligent verarbeitet. Dabei prüft die KI automatisch die beste Quelle: Priorität hat das Unternehmenswiki, dessen Ergebnisse durch einen AI-Grader bewertet werden. Falls nötig, wird eine gezielte Recherche auf angular.dev durchgeführt. Für allgemeine Fragen wird eine öffentliche Suchmaschine genutzt. Neben den Antworten liefert das Portal auch die entsprechenden Quellenangaben, sodass Nutzer die Verlässlichkeit der Informationen einschätzen können. Zusätzlich können Nutzer Feedback und Kommentare zu den Ergebnissen geben, um die Antworten weiter zu verbessern. Verschiedene passende AI-Tracing-Lösungen sorgen für Transparenz, Kostenübersicht und Nutzerfeedback, um Optimierungen zu ermöglichen. Der Workshop behandelt die Entwicklung eines AI-Systems von der Einführung in Generative AI, der Entwicklung von AI-Workflows mit entsprechendem Backend bis zur Benutzerinteraktion in einer Angular-App. Teilnehmer können Aspekte in Google Colab mitimplementieren, um technische Details besser zu verstehen. Lernen Sie, wie Sie Unternehmensinformationen optimal nutzen und durch Generative AI und Angular Effizienz steigern können.

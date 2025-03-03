@@ -1,5 +1,5 @@
 {
-  "name": "ng-days-langgraph",
+  "name": "langgraph-rag-client",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

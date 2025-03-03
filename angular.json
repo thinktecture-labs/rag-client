@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ng-days-langgraph": {
+    "langgraph-rag-client": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/ng-days-langgraph",
+            "outputPath": "dist/langgraph-rag-client",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "ng-days-langgraph:build:production"
+              "buildTarget": "langgraph-rag-client:build:production"
             },
             "development": {
-              "buildTarget": "ng-days-langgraph:build:development"
+              "buildTarget": "langgraph-rag-client:build:development"
             }
           },
           "defaultConfiguration": "development",

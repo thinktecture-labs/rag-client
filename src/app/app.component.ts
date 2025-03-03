@@ -11,12 +11,4 @@ import { NavComponent } from './nav/nav.component';
     styleUrl: './app.component.css',
 })
 export class AppComponent {
-    title = 'ng-days-langgraph';
-
-    constructor() {
-        this.fn();
-    }
-
-    async fn() {
-    }
 }
