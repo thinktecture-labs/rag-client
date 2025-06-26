@@ -18,11 +18,6 @@ export class WorkflowService {
     }
 
     async* run(assistantId: string, threadId: string, input: Record<string, unknown>) {
-        const streamResponse = this.client.runs.stream(threadId, assistantId, { input });
-        for await (const chunk of streamResponse) {
-            if (chunk.data && chunk.event !== "metadata") {
-                yield chunk.data as Run;
-            }
-        }
+        yield await this.client.runs.wait(threadId, assistantId, { input }) as unknown as Run;
     }
 }
