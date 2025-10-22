@@ -7,17 +7,12 @@ import { Assistant } from '@langchain/langgraph-sdk';
 @Component({
   selector: 'app-chat-bar',
   standalone: true,
-    imports: [
-        MatButton,
-        MatFormField,
-        MatInput,
-        MatLabel,
-    ],
+  imports: [MatButton, MatFormField, MatInput, MatLabel],
   templateUrl: './chat-bar.component.html',
-  styleUrl: './chat-bar.component.css'
+  styleUrl: './chat-bar.component.css',
 })
 export class ChatBarComponent {
-    readonly assistants = input.required<Assistant[]>();
+  readonly assistants = input.required<Assistant[]>();
 
-    readonly run = output<{ assistantId: string, question: string }>();
+  readonly run = output<{ assistantId: string; question: string }>();
 }

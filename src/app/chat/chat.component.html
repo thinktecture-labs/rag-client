@@ -1,20 +1,28 @@
 <div class="content">
-    @if (loading()) {
-        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-    }
+  @if (loading()) {
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  }
 
-    @if (response(); as run) {
-        <p class="mat-typography">{{ run.generation?.content }}</p>
-        <mat-chip-set>
-            @switch (run.trust_level) {
-                @case (1) { <mat-chip>Gold</mat-chip> }
-                @case (2) { <mat-chip>Silver</mat-chip> }
-                @case (3) { <mat-chip>Bronze</mat-chip> }
-            }
-        </mat-chip-set>
-        <app-file-list [documents]="run.documents ?? []"/>
-    }
+  @if (response(); as run) {
+    <p class="mat-typography">{{ run.generation?.content }}</p>
+    <mat-chip-set>
+      @switch (run.trust_level) {
+        @case (1) {
+          <mat-chip>Gold</mat-chip>
+        }
+        @case (2) {
+          <mat-chip>Silver</mat-chip>
+        }
+        @case (3) {
+          <mat-chip>Bronze</mat-chip>
+        }
+      }
+    </mat-chip-set>
+    <app-file-list [documents]="run.documents ?? []" />
+  }
 </div>
 
-<app-chat-bar [assistants]="workflowService.assistants()"
-              (run)="run($event.assistantId, $event.question)"></app-chat-bar>
+<app-chat-bar
+  [assistants]="workflowService.assistants()"
+  (run)="run($event.assistantId, $event.question)"
+/>
