@@ -28,15 +28,7 @@ export class ChatComponent {
     this.response.set(undefined);
     this.loading.set(true);
 
-    const threadId = await this.workflowService.createThread();
-    const payload =
-      assistantId === 'a67fe2a6-8f1f-5ecd-839a-9a4b57f5aa50'
-        ? { generation: 'foo' }
-        : { question };
-    const responses = this.workflowService.run(assistantId, threadId, payload);
-    for await (let response of responses) {
-      this.response.set(response);
-    }
+    // TODO: run workflow
 
     this.loading.set(false);
   }
